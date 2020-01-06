@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1211.1636                               -->
+<workbook original-version='18.1' source-build='2019.4.1 (20194.19.1211.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='master.csv+ (Multiple Connections)' inline='true' name='federated.0zo0vkd1txtawa18diq2v1gsolnh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='master' name='textscan.02y6pky0ieclkp173eyqb1o5mo2n'>
+            <connection class='textscan' directory='C:/Users/XXX/Documents/my github repos/irwinwei/capstone-visualization/data' filename='master.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='company' name='textscan.161x2y70w39poy18eesqc00zrwwh'>
+            <connection class='textscan' directory='C:/Users/XXX/Documents/my github repos/irwinwei/capstone-visualization/data' filename='company.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[master.csv].[company]' />
+              <expression op='[company.csv].[prefix]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.02y6pky0ieclkp173eyqb1o5mo2n' name='master.csv' table='[master#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='index' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='string' name='company' ordinal='2' />
+              <column datatype='string' name='class' ordinal='3' />
+              <column datatype='integer' name='prem_acc_direct' ordinal='4' />
+              <column datatype='integer' name='prem_acc_rein_sg' ordinal='5' />
+              <column datatype='integer' name='prem_acc_rein_asean' ordinal='6' />
+              <column datatype='integer' name='prem_acc_rein_other' ordinal='7' />
+              <column datatype='integer' name='prem_acc_total_rein' ordinal='8' />
+              <column datatype='integer' name='prem_cede_rein_sg' ordinal='9' />
+              <column datatype='integer' name='prem_cede_rein_asean' ordinal='10' />
+              <column datatype='integer' name='prem_cede_rein_other' ordinal='11' />
+              <column datatype='integer' name='prem_cede_rein_total' ordinal='12' />
+              <column datatype='integer' name='prem_write_net' ordinal='13' />
+              <column datatype='integer' name='prem_liab_begin' ordinal='14' />
+              <column datatype='integer' name='prem_liab_end' ordinal='15' />
+              <column datatype='integer' name='prem_earned' ordinal='16' />
+              <column datatype='integer' name='claim_set_direct' ordinal='17' />
+              <column datatype='integer' name='claim_set_rein_sg' ordinal='18' />
+              <column datatype='integer' name='claim_set_rein_asean' ordinal='19' />
+              <column datatype='integer' name='claim_set_rein_other' ordinal='20' />
+              <column datatype='integer' name='claim_set_total_rein' ordinal='21' />
+              <column datatype='integer' name='claim_rcv_rein_sg' ordinal='22' />
+              <column datatype='integer' name='claim_rcv_rein_asean' ordinal='23' />
+              <column datatype='integer' name='claim_rcv_rein_other' ordinal='24' />
+              <column datatype='integer' name='claim_rcv_rein_total' ordinal='25' />
+              <column datatype='integer' name='claim_set_net' ordinal='26' />
+              <column datatype='integer' name='claim_liab_end' ordinal='27' />
+              <column datatype='integer' name='claim_liab_begin' ordinal='28' />
+              <column datatype='integer' name='claim_incur_net' ordinal='29' />
+              <column datatype='integer' name='exp_management' ordinal='30' />
+              <column datatype='integer' name='exp_comm_paid' ordinal='31' />
+              <column datatype='integer' name='exp_comm_earned' ordinal='32' />
+              <column datatype='integer' name='exp_comm_incur_net' ordinal='33' />
+              <column datatype='integer' name='exp_other' ordinal='34' />
+              <column datatype='integer' name='uw_gain' ordinal='35' />
+              <column datatype='integer' name='net_invest_income' ordinal='36' />
+              <column datatype='integer' name='operating_result' ordinal='37' />
+            </columns>
+          </relation>
+          <relation connection='textscan.161x2y70w39poy18eesqc00zrwwh' name='company.csv' table='[company#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='code' ordinal='0' />
+              <column datatype='string' name='prefix' ordinal='1' />
+              <column datatype='string' name='name' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>company</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>class</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[class]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>class</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_acc_direct</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_acc_direct]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_acc_direct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_acc_rein_sg</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_acc_rein_sg]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_acc_rein_sg</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_acc_rein_asean</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_acc_rein_asean]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_acc_rein_asean</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_acc_rein_other</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_acc_rein_other]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_acc_rein_other</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_acc_total_rein</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_acc_total_rein]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_acc_total_rein</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_cede_rein_sg</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_cede_rein_sg]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_cede_rein_sg</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_cede_rein_asean</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_cede_rein_asean]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_cede_rein_asean</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_cede_rein_other</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_cede_rein_other]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_cede_rein_other</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_cede_rein_total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_cede_rein_total]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_cede_rein_total</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_write_net</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_write_net]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_write_net</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_liab_begin</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_liab_begin]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_liab_begin</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_liab_end</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_liab_end]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_liab_end</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prem_earned</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prem_earned]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>prem_earned</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_direct</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_direct]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_direct</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_rein_sg</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_rein_sg]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_rein_sg</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_rein_asean</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_rein_asean]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_rein_asean</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_rein_other</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_rein_other]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_rein_other</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_total_rein</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_total_rein]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_total_rein</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_rcv_rein_sg</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_rcv_rein_sg]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_rcv_rein_sg</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_rcv_rein_asean</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_rcv_rein_asean]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_rcv_rein_asean</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_rcv_rein_other</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_rcv_rein_other]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_rcv_rein_other</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_rcv_rein_total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_rcv_rein_total]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_rcv_rein_total</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_set_net</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_set_net]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_set_net</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_liab_end</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_liab_end]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_liab_end</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_liab_begin</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_liab_begin]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_liab_begin</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_incur_net</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_incur_net]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>claim_incur_net</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exp_management</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exp_management]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>exp_management</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exp_comm_paid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exp_comm_paid]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>exp_comm_paid</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exp_comm_earned</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exp_comm_earned]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>exp_comm_earned</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exp_comm_incur_net</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exp_comm_incur_net]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>exp_comm_incur_net</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exp_other</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exp_other]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>exp_other</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uw_gain</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[uw_gain]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>uw_gain</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_invest_income</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[net_invest_income]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>net_invest_income</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_result</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[operating_result]</local-name>
+            <parent-name>[master.csv]</parent-name>
+            <remote-alias>operating_result</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[company.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[code]</local-name>
+            <parent-name>[company.csv]</parent-name>
+            <remote-alias>code</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prefix</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[prefix]</local-name>
+            <parent-name>[company.csv]</parent-name>
+            <remote-alias>prefix</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[company.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Claim Incur Net' datatype='integer' name='[claim_incur_net]' role='measure' type='quantitative' />
+      <column caption='Claim Liab Begin' datatype='integer' name='[claim_liab_begin]' role='measure' type='quantitative' />
+      <column caption='Claim Liab End' datatype='integer' name='[claim_liab_end]' role='measure' type='quantitative' />
+      <column caption='Claim Rcv Rein Asean' datatype='integer' name='[claim_rcv_rein_asean]' role='measure' type='quantitative' />
+      <column caption='Claim Rcv Rein Other' datatype='integer' name='[claim_rcv_rein_other]' role='measure' type='quantitative' />
+      <column caption='Claim Rcv Rein Sg' datatype='integer' name='[claim_rcv_rein_sg]' role='measure' type='quantitative' />
+      <column caption='Claim Rcv Rein Total' datatype='integer' name='[claim_rcv_rein_total]' role='measure' type='quantitative' />
+      <column caption='Claim Set Direct' datatype='integer' name='[claim_set_direct]' role='measure' type='quantitative' />
+      <column caption='Claim Set Net' datatype='integer' name='[claim_set_net]' role='measure' type='quantitative' />
+      <column caption='Claim Set Rein Asean' datatype='integer' name='[claim_set_rein_asean]' role='measure' type='quantitative' />
+      <column caption='Claim Set Rein Other' datatype='integer' name='[claim_set_rein_other]' role='measure' type='quantitative' />
+      <column caption='Claim Set Rein Sg' datatype='integer' name='[claim_set_rein_sg]' role='measure' type='quantitative' />
+      <column caption='Claim Set Total Rein' datatype='integer' name='[claim_set_total_rein]' role='measure' type='quantitative' />
+      <column caption='Class' datatype='string' name='[class]' role='dimension' type='nominal' />
+      <column caption='Code' datatype='string' name='[code]' role='dimension' type='nominal' />
+      <column caption='Company' datatype='string' name='[company]' role='dimension' type='nominal' />
+      <column caption='Exp Comm Earned' datatype='integer' name='[exp_comm_earned]' role='measure' type='quantitative' />
+      <column caption='Exp Comm Incur Net' datatype='integer' name='[exp_comm_incur_net]' role='measure' type='quantitative' />
+      <column caption='Exp Comm Paid' datatype='integer' name='[exp_comm_paid]' role='measure' type='quantitative' />
+      <column caption='Exp Management' datatype='integer' name='[exp_management]' role='measure' type='quantitative' />
+      <column caption='Exp Other' datatype='integer' name='[exp_other]' role='measure' type='quantitative' />
+      <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Net Invest Income' datatype='integer' name='[net_invest_income]' role='measure' type='quantitative' />
+      <column caption='Operating Result' datatype='integer' name='[operating_result]' role='measure' type='quantitative' />
+      <column caption='Prefix' datatype='string' name='[prefix]' role='dimension' type='nominal' />
+      <column caption='Prem Acc Direct' datatype='integer' name='[prem_acc_direct]' role='measure' type='quantitative' />
+      <column caption='Prem Acc Rein Asean' datatype='integer' name='[prem_acc_rein_asean]' role='measure' type='quantitative' />
+      <column caption='Prem Acc Rein Other' datatype='integer' name='[prem_acc_rein_other]' role='measure' type='quantitative' />
+      <column caption='Prem Acc Rein Sg' datatype='integer' name='[prem_acc_rein_sg]' role='measure' type='quantitative' />
+      <column caption='Prem Acc Total Rein' datatype='integer' name='[prem_acc_total_rein]' role='measure' type='quantitative' />
+      <column caption='Prem Cede Rein Asean' datatype='integer' name='[prem_cede_rein_asean]' role='measure' type='quantitative' />
+      <column caption='Prem Cede Rein Other' datatype='integer' name='[prem_cede_rein_other]' role='measure' type='quantitative' />
+      <column caption='Prem Cede Rein Sg' datatype='integer' name='[prem_cede_rein_sg]' role='measure' type='quantitative' />
+      <column caption='Prem Cede Rein Total' datatype='integer' name='[prem_cede_rein_total]' role='measure' type='quantitative' />
+      <column caption='Prem Earned' datatype='integer' name='[prem_earned]' role='measure' type='quantitative' />
+      <column caption='Prem Liab Begin' datatype='integer' name='[prem_liab_begin]' role='measure' type='quantitative' />
+      <column caption='Prem Liab End' datatype='integer' name='[prem_liab_end]' role='measure' type='quantitative' />
+      <column caption='Prem Write Net' datatype='integer' name='[prem_write_net]' role='measure' type='quantitative' />
+      <column caption='Uw Gain' datatype='integer' name='[uw_gain]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.302885' measure-ordering='alphabetic' measure-percentage='0.697115' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2F01FC6B-592B-404C-A746-1B9D5004F5D5}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1DA7E4E2-231F-4885-81A8-846D028143FD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
