@@ -8,9 +8,9 @@ pa,Personal Accident
 health,Group Health
 pub_lia,Public Liability
 bonds,Bonds
-constr_engr,"Construction, Engineering, Machinery"
+cnstr_engr,"Construction, Engineering, Machinery"
 prof_indm,Professional Indemnity
 cpr,Credit and Political Risk
 others,Others
 misc_total,Misc Total
-total,Total
+Total,Total
