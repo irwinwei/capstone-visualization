@@ -1,0 +1,16 @@
+﻿class,classname
+mac,Cargo (Marine and Aviation)
+mahl,Hull and Liability (Marine and Aviation)
+fire,Fire
+motor,Motor
+wic,Work Injury
+pa,Personal Accident
+health,Group Health
+pub_lia,Public Liability
+bonds,Bonds
+constr_engr,"Construction, Engineering, Machinery"
+prof_indm,Professional Indemnity
+cpr,Credit and Political Risk
+others,Others
+misc_total,Misc Total
+total,Total
